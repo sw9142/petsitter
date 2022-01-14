@@ -2,6 +2,7 @@
 contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
  <% Member loginUser = (Member) session.getAttribute("loginUser");
  String contextPath = request.getContextPath(); 
+ System.out.println("contextPath: "+contextPath);
  String alertMsg = (String)session.getAttribute("alertMsg");
  String confiMsg = (String)session.getAttribute("confiMsg");
 %>
@@ -161,7 +162,7 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <section class="section_header">
       <div class="bars">
         <div class="topbar">
-          <marquee> w e l c o m e t o m y p e t s i t t e r</marquee>
+          <marquee> w   e   l   c   o   m   e   t   o   m   y   p   e   t   s   i   t   t   e   r</marquee>
         </div>
         <div class="navbar_">
           <div class="nav_logo">
@@ -180,7 +181,7 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
               </p>
               <li
                 id="adminDashBoard"
-                onclick="location.href='/pet/adminDashBoard.bo'"
+                onclick="location.href='/petsitter/adminDashBoard.bo'"
               >
                 Admin DashBoard
               </li>
