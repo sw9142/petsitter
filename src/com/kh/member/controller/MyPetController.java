@@ -42,7 +42,7 @@ public class MyPetController extends HttpServlet {
 			
 			session.setAttribute("alertMsg", "로그인 후 이용 가능한 서비스입니다.");
 			
-			// 괘씸하니깐 메인페이지로 소환 => /jsp => sendRedirect 형식
+			
 			response.sendRedirect(request.getContextPath());
 			
 		}

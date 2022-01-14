@@ -37,21 +37,21 @@
           <form action="<%= contextPath %>/login.me" method="post">
             <table>
               <tr>
-                <th >USER ID </th>
+                <th >아이디 </th>
                 <td><input type="text" name="userId" required /></td>
               </tr>
               <tr>
-                <th>PASSWORD </th>
+                <th>비밀번호 </th>
                 <td><input type="password" name="userPwd" required /></td>
               </tr>
             </table>
             <div class="login_btns" align="center">
-              <button class="btn btn-primary btn-sm" type="submit">LOGIN</button>
-              <button  class="btn btn-secondary btn-sm" type="reset">CANCEL	</button>
+              <button class="btn btn-primary btn-sm" type="submit">로그인</button>
+              <button  class="btn btn-secondary btn-sm" type="reset">취소</button>
             </div>
           </form>
         </div>
-        <div align="center" style="font-size: 14px; font-weight: bold;"><a href="<%= contextPath%>/registerForm.me">Don't have an account yet? click!</a></div>
+        <div align="center" style="font-size: 14px; font-weight: bold;"><a href="<%= contextPath%>/registerForm.me">계정이 아직 없으신가요? click!</a></div>
       </div>
 
 <%@ include file="../common/footer.jsp" %>

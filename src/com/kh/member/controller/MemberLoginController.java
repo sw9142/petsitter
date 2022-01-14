@@ -24,7 +24,7 @@ public class MemberLoginController extends HttpServlet {
      */
     public MemberLoginController() {
         super();
-        // TODO Auto-generated constructor stub
+ 
     }
 
 	/**
@@ -44,11 +44,11 @@ public class MemberLoginController extends HttpServlet {
 		if(m != null) {
 			
 			request.getSession().setAttribute("loginUser", m);
-			request.getSession().setAttribute("alertMsg", m.getMemName() + "님 환영합니다!");
+			request.getSession().setAttribute("alertMsg", "Welcome "+ m.getMemName() + "!");
 		
-			response.sendRedirect("/pet/");
+			response.sendRedirect("/petsitter/");
 		}else {
-			request.getSession().setAttribute("alertMsg", "로그인에 실패하셨습니다.");
+			request.getSession().setAttribute("alertMsg", "ë¡œê·¸ì�¸ì—� ì‹¤íŒ¨í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			request.getRequestDispatcher("views/member/loginPage.jsp").forward(request, response);
 			
 		}

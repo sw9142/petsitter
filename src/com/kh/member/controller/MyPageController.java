@@ -28,29 +28,21 @@ public class MyPageController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// 1. 포워딩 : 현재 이 서블릿의 url 맵핑값이 들어감
-		// 2. sendRedirect : url 맵핑값 X
-				
-		// 로그아웃 후 url 을 직접 localhost:8888/jsp/myPage.me 로 요청했더니
-		// 로그인이 안되었음에도 불구하고 마이페이지가 접속됨 => 막아줘야함!!!!!!
 		
-		// 접속자의 정보 => session 
-		// 로그인 전 : loginUser 키값에 해당되는 밸류 null => alert 로 경고
-		// 로그인 후 : loginUser 키값에 해당되는 밸류가 들어있음 => 포워딩
 		
 		HttpSession session = request.getSession();
 		
-		if(session.getAttribute("loginUser") == null) { // 로그인 전
+		if(session.getAttribute("loginUser") == null) { 
 			
-			session.setAttribute("alertMsg", "로그인 후 이용 가능한 서비스입니다.");
+			session.setAttribute("alertMsg", "You need to login first");
 			
-			// 괘씸하니깐 메인페이지로 소환 => /jsp => sendRedirect 형식
+		
 			response.sendRedirect(request.getContextPath());
 			
 		}
-		else { // 로그인 후
+		else {
 			
-			// 포워딩 방법
+			
 			request.getRequestDispatcher("views/member/myPage.jsp").forward(request, response);
 		}
 	}

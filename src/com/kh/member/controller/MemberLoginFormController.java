@@ -28,9 +28,6 @@ public class MemberLoginFormController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		
-		/*
-		 * if(request.getSession().getAttribute("loginUser") == null)
-		 */
 		request.getRequestDispatcher("views/member/loginPage.jsp").forward(request, response);
 	}
 

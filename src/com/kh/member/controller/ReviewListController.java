@@ -39,7 +39,7 @@ public class ReviewListController extends HttpServlet {
 		Review empty =new Review();
 		empty.setReviewDate(null);
 		empty.setWriterName(null);
-		empty.setReviewContent("리뷰가 아직 없습니다.");
+		empty.setReviewContent("No Review yet");
 		
 		
 		if(!reviews.isEmpty()) {

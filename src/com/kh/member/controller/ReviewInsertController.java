@@ -53,11 +53,11 @@ public class ReviewInsertController extends HttpServlet {
 		
 		if(result > 0) { 
 			
-			request.getSession().setAttribute("alertMsg", "리뷰 등록 성공");
+			request.getSession().setAttribute("alertMsg", "Successfully Upload the review");
 			response.sendRedirect(request.getContextPath() + "/matchList.ma?currentPage=1");
 		}
 		else { // 실패 => 에러페이지가 보여지도록 에러문구
-			request.setAttribute("errorMsg", "리뷰 등록 실패");
+			request.setAttribute("errorMsg", "Failed in uploading the review");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 		

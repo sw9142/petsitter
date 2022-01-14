@@ -52,19 +52,19 @@ public class ReportInsertController extends HttpServlet {
 			resultupdate = new MemberService().updateReportCnt(repMem);
 		}
 		else { // 실패 => 에러페이지가 보여지도록 에러문구
-			request.setAttribute("errorMsg", "회원 신고를 실패했습니다.");
+			request.setAttribute("errorMsg", "Failed in report");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 		
 		if(result * resultupdate > 0) {
 			
-			request.getSession().setAttribute("alertMsg", "회원을 신고하였습니다.");
+			request.getSession().setAttribute("alertMsg", "You have sent the report to admin");
 			response.sendRedirect(request.getContextPath() + "/matchList.ma?currentPage=1");
 		}
 		
 		else {
 			
-			request.setAttribute("errorMsg", "회원 신고를 실패했습니다.");
+			request.setAttribute("errorMsg", "Failed in report.");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 	}

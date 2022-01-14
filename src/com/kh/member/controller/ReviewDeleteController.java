@@ -48,11 +48,11 @@ public class ReviewDeleteController extends HttpServlet {
 		
 		if(result > 0) { 
 			
-			request.getSession().setAttribute("alertMsg", "리뷰 삭제 성공");
+			request.getSession().setAttribute("alertMsg", "Successfully deleted the review");
 			response.sendRedirect(request.getContextPath() + "/adminMatch.ad?currentPage=1");
 		}
 		else { // 실패 => 에러페이지가 보여지도록 에러문구
-			request.setAttribute("errorMsg", "리뷰 삭제 실패");
+			request.setAttribute("errorMsg", "Failed in deleting the review");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 	}

@@ -69,7 +69,7 @@ pageEncoding="UTF-8"%>
         >
           <table class="table table-borderless">
             <tr>
-              <th><span style="color: red">*</span> ID</th>
+              <th><span style="color: red">*</span> 아이디</th>
               <td>
                 <input type="text" size="30" name="userId" required />
                 <button
@@ -77,12 +77,12 @@ pageEncoding="UTF-8"%>
                   onclick="idCheck();"
                   class="btn btn-outline-dark btn-sm"
                 >
-                  Id Availability
+                  아이디 중복검사
                 </button>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> Password</th>
+              <th><span style="color: red">*</span> 비밀번호</th>
               <td>
                 <input
                   type="password"
@@ -94,7 +94,7 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> Confirm Password</th>
+              <th><span style="color: red">*</span> 비밀번호 확인</th>
               <td>
                 <input type="password" size="30" name="checkPwd" required />
                 <p
@@ -109,7 +109,7 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> Name</th>
+              <th><span style="color: red">*</span> 이름</th>
               <td><input type="text" name="userName" size="30" required />
                 <p id="nameResult"       
                  style=" margin: 0;
@@ -119,11 +119,11 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> Id Number</th>
+              <th><span style="color: red">*</span> 주민등록번호</th>
               <td>
                 <input
                   type="text"
-                
+                  placeholder="- 포함 주민등록번호"
                   name="idNo"
                   size="30"
                   required
@@ -131,7 +131,7 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> Email</th>
+              <th><span style="color: red">*</span> 이메일</th>
               <td>
                 <input
                   type="email"
@@ -143,12 +143,12 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> Phone</th>
+              <th><span style="color: red">*</span> 핸드폰</th>
               <td>
                 <input
                   type="text"
                   name="phone"
-                  placeholder="***-***-****"
+                  placeholder=" - 없이 번호만 입력해주세요"
                   size="30"
                   required
                 />
@@ -160,13 +160,13 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> Address</th>
+              <th><span style="color: red">*</span> 주소</th>
               <td>
                 <div class="location">
                   <select name="location" id="location">
-                    <option value="서울">SOUEL</option>
-                    <option value="경기">KYUNGKI</option>
-                    <option value="인천">INCHEON</option>
+                    <option value="서울">서울</option>
+                    <option value="경기">경기</option>
+                    <option value="인천">인천</option>
                     <option value="강원">강원</option>
                     <option value="충북">충북</option>
                     <option value="충남">충남</option>
@@ -182,7 +182,7 @@ pageEncoding="UTF-8"%>
                     <option value="대전">대전</option>
                     <option value="제주">제주</option>
                   </select>
-                  
+                  시
                 </div>
                 <textarea
                   name="address"
@@ -197,7 +197,7 @@ pageEncoding="UTF-8"%>
           </table>
           <div class="register_agreement">
             <fieldset>
-              <legend align="center">Terms and Condition(Required)</legend>
+              <legend align="center">개인정보 동의서</legend>
               <textarea name="" id="" cols="90" rows="10" disabled>
         1.개인정보의 수집, 이용 목적 KOTRA 통합 회원관리, 서비스제공, 민원처리
         2.수집하는 개인정보의 항목 : 필수입력항목 아이디, 비밀번호 성명(한글) 주소, 전화번호, 이메일 CI : 개인식별정보 DI : 중복가입 확인정보
@@ -216,7 +216,7 @@ pageEncoding="UTF-8"%>
                 id="agreed"
                 required
               />
-              <label for="agreed">YES, AGREE</label>
+              <label for="agreed">예, 동의합니다.</label>
             </div>
           </div>
           <div class="register_btns" align="center">
@@ -234,9 +234,9 @@ pageEncoding="UTF-8"%>
               type="submit"
               onclick="return validate()"
             >
-              REGISTRATION
+              회원가입
             </button>
-            <button class="btn btn-secondary" type="reset">CANCEL</button>
+            <button class="btn btn-secondary" type="reset">취소하기</button>
           </div>
         </form>
       </div>
@@ -252,11 +252,11 @@ pageEncoding="UTF-8"%>
           data: { checkId: $userId.val() },
           success: function (result) {
             if (result == "NNNNN") {
-              alert("Already existed or deleted account Id.");
+              alert("이미 존재하거나 탈퇴한회원의 아이디입니다.");
               //다시입력유도
               $userId.focus();
             } else {
-              if (confirm("Id is available!")) {
+              if (confirm("사용 가능한 아이디입니다. 사용하시겠습니까?")) {
                 $("#enroll-form button[type=submit]").removeAttr("disabled");
                 $("input[name=userPwd]").prop("disabled", false);
                 $("input[name=userPwd]").focus();
@@ -289,11 +289,11 @@ pageEncoding="UTF-8"%>
           if (
             $("input[name=userPwd]").val() === $("input[name=checkPwd]").val()
           ) {
-            $("#pwdResult").text("Passwords Match!");
+            $("#pwdResult").text("비밀번호가 일치합니다.");
             $("#pwdResult").css("color", "blue");
             pwdValidate = true;
           } else {
-            $("#pwdResult").text("Passwords do not match");
+            $("#pwdResult").text("비밀번호가 불일치합니다.");
             $("#pwdResult").css("color", "red");
             pwdValidate = false;
           }

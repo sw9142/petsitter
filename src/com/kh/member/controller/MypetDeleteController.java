@@ -26,14 +26,14 @@ public class MypetDeleteController extends HttpServlet {
      */
     public MypetDeleteController() {
         super();
-        // TODO Auto-generated constructor stub
+     
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 			
 		request.setCharacterEncoding("UTF-8");
 		
@@ -42,7 +42,7 @@ public class MypetDeleteController extends HttpServlet {
 		
 		if(session.getAttribute("loginUser") == null) { // 로그인 전
 			
-			session.setAttribute("alertMsg", "로그인 후 이용 가능한 서비스입니다.");
+			session.setAttribute("alertMsg", "Please login first");
 			
 			// 괘씸하니깐 메인페이지로 소환 => /jsp => sendRedirect 형식
 			response.sendRedirect(request.getContextPath());
@@ -67,11 +67,11 @@ public class MypetDeleteController extends HttpServlet {
 			
 			if(result > 0) { // 성공 => /jsp/list.bo url 재요청 => 리스트페이지가 보여지도록
 				
-				request.getSession().setAttribute("alertMsg", "삭제가 완료 되었습니다.");
+				request.getSession().setAttribute("alertMsg", "Successfully delete it");
 				request.getRequestDispatcher("views/mypet/myPet.jsp").forward(request, response);
 			}
 			else { // 실패 => 에러페이지가 보여지도록 에러문구
-				request.setAttribute("errorMsg", " 삭제 실패");
+				request.setAttribute("errorMsg", "delete failed");
 				request.getRequestDispatcher("views/mypet/myPet.jsp").forward(request, response);
 			}
 			

@@ -27,19 +27,15 @@ public class MemberIdCheckController extends HttpServlet {
     
         // GET 
         
-                // 2) request 로부터 값 뽑기
+             
                 String checkId = request.getParameter("checkId");
             
-                // 3) VO가공 => 패싱 
-                
-                // 4) Service 단으로 토스(MemberService)
-            int count = new MemberService().idCheck(checkId); // 중복확인은 SELECT 문
-            //중복확인은 SELECT문이지만 굳이 정보를 다담아서 넘길필요가 없기 떄문에 숫자로받겟따.
+             
+            int count = new MemberService().idCheck(checkId); 
+        
             
             
-            // 5) 결과에따른 응답뷰 지정=> 화면이깜빡
-            
-                // 형식과 인코딩 먼저 지정
+     
                 response.setContentType("text/html; charset=UTF-8"); 
             
             
@@ -47,9 +43,9 @@ public class MemberIdCheckController extends HttpServlet {
             
              
             
-                if(count>0) { //존재하는 아이디가 이미 있을 경우"NNNNN" 중복값이 있을 뗴
+                if(count>0) { 
                     response.getWriter().print("NNNNN");
-                } else { //없을경우 "NNNNY" 중복값이 없을 떄
+                } else { 
                     response.getWriter().print("NNNNY");
                 }
     }

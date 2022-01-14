@@ -28,7 +28,7 @@ public class MemberLogoutController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		request.getSession().removeAttribute("loginUser");
-		response.sendRedirect("/pet/");
+		response.sendRedirect("/petsitter/");
 	}
 
 	/**

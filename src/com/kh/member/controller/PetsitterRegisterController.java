@@ -36,11 +36,11 @@ public class PetsitterRegisterController extends HttpServlet {
 		
 		if(result> 0) {
 			
-			request.getSession().setAttribute("alertMsg", "축하합니다! 펫시터 등록이 완료되었습니다!");
+			request.getSession().setAttribute("alertMsg", "Congrat! You have Successfully applied for PetSitter!");
 			response.sendRedirect(request.getContextPath()+"/registerForm.bo");
 			
 		}else {
-			request.setAttribute("errorMsg", "펫시터 등록에 실패하셨습니다.");
+			request.setAttribute("errorMsg", "Application failed");
 			request.getRequestDispatcher("views/common/errorPage.jsp");
 			
 		}
