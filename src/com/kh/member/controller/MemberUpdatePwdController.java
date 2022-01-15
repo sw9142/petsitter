@@ -46,10 +46,10 @@ public class MemberUpdatePwdController extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		if(updateMem == null) { 
-			session.setAttribute("alertMsg", "ë¹„ë°€ë²ˆí˜¸ ë³€ê²½ì—� ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
+			session.setAttribute("alertMsg", "Successfully Update the Password");
 		}
 		else { 
-			session.setAttribute("alertMsg", "ì„±ê³µì �ìœ¼ë¡œ ë¹„ë°€ë²ˆí˜¸ê°€ ë³€ê²½ë�˜ì—ˆìŠµë‹ˆë‹¤.");
+			session.setAttribute("alertMsg", "Sorry, Failed in update");
 			session.setAttribute("loginUser", updateMem);
 		}
 		

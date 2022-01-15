@@ -46,15 +46,11 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
         text-decoration: none;
       }
 
-      /*
-        font-family: 'Jua', sans-serif;
-        font-family: 'Cute Font', cursive;
-
-        */
+    
       body {
         margin: 0;
         font-family: "Poor Story", cursive;
-        font-size: 16px;
+        font-size: 1.3rem;
 
         width: 100%;
       }
@@ -162,7 +158,7 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <section class="section_header">
       <div class="bars">
         <div class="topbar">
-          <marquee> w   e   l   c   o   m   e   t   o   m   y   p   e   t   s   i   t   t   e   r</marquee>
+          <marquee style="letter-spacing: 1rem;"> welcometomypetsiiter </marquee>
         </div>
         <div class="navbar_">
           <div class="nav_logo">
@@ -213,10 +209,10 @@ contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
               <%} else{%>
               <li onclick="location.href='<%= contextPath %>/loginForm.me'">
-                LogIn
+                Login
               </li>
               <li onclick="location.href='<%= contextPath %>/registerForm.me'">
-                Registration
+                Sign Up
               </li>
               <li
                 onclick="location.href='<%= contextPath %>/list.no?currentPage=1'"

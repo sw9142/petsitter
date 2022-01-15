@@ -33,11 +33,11 @@ public class BoardDeleteController extends HttpServlet {
 		
 		if(result > 0) {
 			
-			request.getSession().setAttribute("alertMsg", "성공적으로 삭제되었습니다.");
+			request.getSession().setAttribute("alertMsg", "Successfully Deleted!");
 			response.sendRedirect(request.getContextPath()+"/list.bo?currentPage=1");
 			
 		}else {
-			request.setAttribute("errorMeg", "삭제에 실패하였습니다.");
+			request.setAttribute("errorMeg", "Failed in deleting the board");
 			request.getRequestDispatcher("views/common/errorPage.jsp");
 		}
 				

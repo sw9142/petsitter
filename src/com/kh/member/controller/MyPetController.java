@@ -40,7 +40,7 @@ public class MyPetController extends HttpServlet {
 		
 		if(session.getAttribute("loginUser") == null) { // 로그인 전
 			
-			session.setAttribute("alertMsg", "로그인 후 이용 가능한 서비스입니다.");
+			session.setAttribute("alertMsg", "Please login first");
 			
 			
 			response.sendRedirect(request.getContextPath());

@@ -75,7 +75,7 @@ public class AdminMatchController extends HttpServlet {
 			request.getRequestDispatcher("views/admin/match/matchManagement.jsp?currentPage=1").forward(request, response);
 			
 		}else {
-			request.getSession().setAttribute("alertMsg", "관리자가 아니면 사용하실 수 없습니다.");
+			request.getSession().setAttribute("alertMsg", "It is only for admin");
 			response.sendRedirect("/pet/");
 		}
 		

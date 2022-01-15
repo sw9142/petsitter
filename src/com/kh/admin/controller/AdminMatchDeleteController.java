@@ -38,11 +38,11 @@ public class AdminMatchDeleteController extends HttpServlet {
 		
 		if(result > 0) { // 성공 => /jsp/list.bo url 재요청 => 리스트페이지가 보여지도록
 			
-			request.getSession().setAttribute("alertMsg", "매칭내역 삭제 성공.");
+			request.getSession().setAttribute("alertMsg", "Succesfully Deleted!");
 			response.sendRedirect(request.getContextPath() + "/adminMatch.ad?currentPage=1");
 		}
 		else { // 실패 => 에러페이지가 보여지도록 에러문구
-			request.setAttribute("errorMsg", "매칭내역 삭제 실패");
+			request.setAttribute("errorMsg", "Failed in delete");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 	}

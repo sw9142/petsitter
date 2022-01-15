@@ -55,7 +55,7 @@ public class MemberUpdateController extends HttpServlet {
 		
 		if(updateMem == null) { 
 			
-			request.setAttribute("errorMsg", "íšŒì›�ì •ë³´ ìˆ˜ì •ì—� ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
+			request.setAttribute("errorMsg", "Successfully update the information");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 		else { 
@@ -63,7 +63,7 @@ public class MemberUpdateController extends HttpServlet {
 			HttpSession session = request.getSession();
 			
 			session.setAttribute("loginUser", updateMem); 
-			session.setAttribute("alertMsg", "ì„±ê³µì �ìœ¼ë¡œ íšŒì›�ì •ë³´ë¥¼ ìˆ˜ì •í–ˆìŠµë‹ˆë‹¤.");
+			session.setAttribute("alertMsg", "Sorry, Failed in update");
 
 			response.sendRedirect(request.getContextPath() + "/myPage.me");
 		}

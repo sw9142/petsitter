@@ -48,11 +48,11 @@ public class NoticeEnrollController extends HttpServlet {
 		//5)결과 받아 화면 띄우기
 		//값 담은 것도 같이 보줘야 함
 		if(result>0) {
-			request.getSession().setAttribute("alertMsg", "공지사항이 등록됐습니다.");
+			request.getSession().setAttribute("alertMsg", "Upload the notice");
 			response.sendRedirect(request.getContextPath()+"/list.no?currentPage=1");
 		}
 		else {
-			request.getSession().setAttribute("alertMsg", "공지사항 등록에 실패했습니다.");
+			request.getSession().setAttribute("alertMsg", "Failed in upload");
 			response.sendRedirect(request.getContextPath()+"/list.no");
 		}
 		

@@ -67,20 +67,20 @@
   </head>
   <body>
     <%@ include file = "../common/menubar.jsp"%>
-    <h3 align="center">매칭내역 상세관리</h3>
+    <h3 align="center">Matching Info</h3>
 
     <div class="detail_area">
       <br />
       <table class="table table-bordered detail_table" width="80%">
         <tr>
-          <th>매칭코드</th>
-          <th>견주</th>
-          <th>펫시터</th>
-          <th>지역</th>
-          <th>예약 날짜</th>
-          <th>돌봄 시작 날짜</th>
-          <th>돌봄 종료 날짜</th>
-          <th>매칭종료여부</th>
+          <th>Matching Code</th>
+          <th>PetOwner</th>
+          <th>PetSitter</th>
+          <th>Location</th>
+          <th>Application Date</th>
+          <th>Care Start Date</th>
+          <th>Care End Date</th>
+          <th>Matching Status</th>
         </tr>
         <tr style="background: white">
           <td><%= m.getMatNo() %></td>
@@ -92,9 +92,9 @@
           <td><%= m.getCareDdate() %></td>
           <td>
           	<% if(m.getIsEnd().equals("N")) { %>
-                                  진행중
+                         Ongoing
             <% } else { %>
-                                      종료
+                                    End
             <% } %>
           </td>
         </tr>
@@ -102,7 +102,7 @@
       <br />
       <table class="table table-bordered detail_tb" width="80%">
         <tr>
-          <th style="background: rgba(0, 0, 0, 0.05)" width="400">돌봄주소</th>
+          <th style="background: rgba(0, 0, 0, 0.05)" width="400">PetSitter's Location</th>
           <td style="border-bottom: 1px solid #dee2e6">
             <%= m.getAddress() %>
           </td>
@@ -111,14 +111,14 @@
       <br />
       <br />
       <br />
-      <h2 style="text-align: center">매칭상대 정보</h2>
+      <h2 style="text-align: center">About PetSitter/PetOwner</h2>
       <br />
       <div>
         <table class="table table-bordered detail_tb" align="center">
           <tr>
-            <th>이름</th>
-            <th>이메일</th>
-            <th>전화번호</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
           </tr>
           <tr style="background: white">
             <td><%= joinMem.getMemName() %></td>
@@ -138,7 +138,7 @@
           margin-top: 2rem;
         "
       >
-        반려동물 정보
+        Pet Info
       </h2>
       <div class="matching-detail-pet">
         <div class="matching-detail-pet-img" style="align-self: center">
@@ -147,12 +147,12 @@
         </div>
         <table class="table detail_tb">
           <tr>
-            <th>반려동물 종</th>
-            <th>반려동물 이름</th>
-            <th>반려동물 성별</th>
-            <th>반려동물 나이</th>
-            <th>반려동물 몸무게</th>
-            <th>요구사항 및 특징</th>
+            <th>Pet Breed</th>
+            <th>Pet Name</th>
+            <th>Pet Gender</th>
+            <th>Pet Age</th>
+            <th>Pet Weight</th>
+            <th>Other Info</th>
           </tr>
           <tr style="background: white">
             <td><%= m.getPetType() %></td>
@@ -175,7 +175,7 @@
             margin-top: 2rem;
           "
         >
-          작성한 리뷰
+          Uploaded Review
         </h2>
         <p align="center" style="border: 1px solid lightgray; width: 800px; margin: auto; background-color: white; padding: 2rem;">
           <% if(re != null) {%> <%= re.getReviewContent() %> <% } else {%> <% }
@@ -193,7 +193,7 @@
               margin-top: 2rem;
             "
           >
-            리뷰 작성
+          Write a review
           </h2>
           <input
             type="hidden"
@@ -210,7 +210,7 @@
           </div>
         </div>
         <div align="right" style="margin-right: 10%">
-          <button class="btn btn-primary sub_btn1" style="width: 100px; margin-top: 1rem; margin-right: 5rem;" type="submit">리뷰 작성</button>
+          <button class="btn btn-primary sub_btn1" style="width: 100px; margin-top: 1rem; margin-right: 5rem;" type="submit">UPLOAD</button>
         </div>
       </form>
       <% } %>
@@ -224,7 +224,7 @@
               margin-top: 2rem;
             "
           >
-            신고 내용 작성
+         Write a report
           </h2>
           <div style="width: 100%; text-align: center">
             <input

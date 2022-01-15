@@ -18,7 +18,7 @@
   
   <div align="center" class="matchsuccess">
 <h1 > 
- 매칭에 성공하셨습니다.</h1>
+Congratulation! Matching Success!</h1>
 </div>
   <%@ include file="../common/footer.jsp" %>
 

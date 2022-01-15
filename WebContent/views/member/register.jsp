@@ -20,7 +20,7 @@ pageEncoding="UTF-8"%>
         width: 500px;
       }
       .register_form_container th {
-        width: 100px;
+        width: 120px;
       }
       .register_form_container td {
         width: 300px;
@@ -58,7 +58,7 @@ pageEncoding="UTF-8"%>
     <%@ include file="../common/menubar.jsp" %>
     <div class="register_container">
       <h2 style="text-align: center; font-weight: bold; margin-top: 3rem">
-        회원가입
+       Sign Up
       </h2>
       <div class="register_form_container">
         <form
@@ -69,7 +69,7 @@ pageEncoding="UTF-8"%>
         >
           <table class="table table-borderless">
             <tr>
-              <th><span style="color: red">*</span> 아이디</th>
+              <th><span style="color: red">*</span> ID</th>
               <td>
                 <input type="text" size="30" name="userId" required />
                 <button
@@ -77,12 +77,12 @@ pageEncoding="UTF-8"%>
                   onclick="idCheck();"
                   class="btn btn-outline-dark btn-sm"
                 >
-                  아이디 중복검사
+                  ID duplicate check
                 </button>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> 비밀번호</th>
+              <th><span style="color: red">*</span> Password</th>
               <td>
                 <input
                   type="password"
@@ -94,7 +94,7 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> 비밀번호 확인</th>
+              <th><span style="color: red">*</span>Confirm Password</th>
               <td>
                 <input type="password" size="30" name="checkPwd" required />
                 <p
@@ -109,7 +109,7 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> 이름</th>
+              <th><span style="color: red">*</span>Name</th>
               <td><input type="text" name="userName" size="30" required />
                 <p id="nameResult"       
                  style=" margin: 0;
@@ -119,11 +119,11 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> 주민등록번호</th>
+              <th><span style="color: red">*</span> ID Number</th>
               <td>
                 <input
                   type="text"
-                  placeholder="- 포함 주민등록번호"
+                  placeholder="number only"
                   name="idNo"
                   size="30"
                   required
@@ -131,7 +131,7 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> 이메일</th>
+              <th><span style="color: red">*</span>Email</th>
               <td>
                 <input
                   type="email"
@@ -143,12 +143,12 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> 핸드폰</th>
+              <th><span style="color: red">*</span> Phone</th>
               <td>
                 <input
                   type="text"
                   name="phone"
-                  placeholder=" - 없이 번호만 입력해주세요"
+                  placeholder="number only"
                   size="30"
                   required
                 />
@@ -160,29 +160,29 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
             <tr>
-              <th><span style="color: red">*</span> 주소</th>
+              <th><span style="color: red">*</span> Address</th>
               <td>
                 <div class="location">
                   <select name="location" id="location">
-                    <option value="서울">서울</option>
-                    <option value="경기">경기</option>
-                    <option value="인천">인천</option>
-                    <option value="강원">강원</option>
-                    <option value="충북">충북</option>
-                    <option value="충남">충남</option>
-                    <option value="전북">전북</option>
-                    <option value="전북">전남</option>
-                    <option value="광주">광주</option>
-                    <option value="울산">울산</option>
-                    <option value="경북">경북</option>
-                    <option value="경남">경남</option>
-                    <option value="대구">대구</option>
-                    <option value="부산">부산</option>
-                    <option value="세종">세종</option>
-                    <option value="대전">대전</option>
-                    <option value="제주">제주</option>
+                    <option value="Seoul">Seoul</option>
+                    <option value="KyungKi">KyungKi</option>
+                    <option value="Incheon">Incheon</option>
+                    <option value="KangWon">KangWon</option>
+                    <option value="ChungBook">ChungBook</option>
+                    <option value="ChungNam">ChungNam</option>
+                    <option value="JunBook">JunBook</option>
+                    <option value="JunNam">JunNam</option>
+                    <option value="kwangJu">kwangJu</option>
+                    <option value="WoolSan">WoolSan</option>
+                    <option value="KyungBuk">KyungBuk</option>
+                    <option value="KyungNam">KyungNam</option>
+                    <option value="DaeGu">DaeGu</option>
+                    <option value="Busan">Busan</option>
+                    <option value="SeJong">SeJong</option>
+                    <option value="DaeJun">DaeJun</option>
+                    <option value="Jeju">Jeju</option>
                   </select>
-                  시
+           
                 </div>
                 <textarea
                   name="address"
@@ -197,16 +197,20 @@ pageEncoding="UTF-8"%>
           </table>
           <div class="register_agreement">
             <fieldset>
-              <legend align="center">개인정보 동의서</legend>
-              <textarea name="" id="" cols="90" rows="10" disabled>
-        1.개인정보의 수집, 이용 목적 KOTRA 통합 회원관리, 서비스제공, 민원처리
-        2.수집하는 개인정보의 항목 : 필수입력항목 아이디, 비밀번호 성명(한글) 주소, 전화번호, 이메일 CI : 개인식별정보 DI : 중복가입 확인정보
-        선택 입력항목 성명(영문), 팩스, 휴대전화, 부서, 직위, 주소(영문) 개인관심품목, 개인관심지역
-        3.개인정보의 보유 및 이용기간 : 회원 탈퇴 시까지(개인회원 : 2년 단위 재동의, 기업회원 : 5년 단위 재동의) ※ 단, 법률이 정하는 바에 따라 탈퇴 후에도 일정기간 보유할 수 있습니다.
-        4.개인정보 제공 수집·이용 동의 거부 권리 및 동의 거부 따른 불이익 내용 또는 제한사항 위의 개인정보 수집∙이용에 대한 동의를 거부할 권리가 있습니다.
-            - 필수항목의 경우 KOTRA 사업 안내 및 고객 관리, 민원처리 등을 위해 반드시 필요한 사항으로 필수항목에 대하여 수집∙이용에 동의하지 않을 경우 회원에 가입할 수 없습니다.
-            - 선택항목의 수집∙이용에 동의하지 않을 경우는 회원으로 가입하여 기본적인 서비스를 제공받을 수 있으나, 맞춤형 서비스제공 등의 추가적인 서비스를 제공받을 수 없음을 양지하여 주시기 바랍니다.
-                            </textarea
+              <legend align="center">Terms and Condition</legend>
+              <textarea name="" id="" cols="90" rows="10" disabled> 
+              
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni architecto magnam, porro dicta doloribus, odit nostrum repellat quos adipisci iusto, quis recusandae consequatur praesentium ipsa distinctio totam excepturi. Velit, laborum?
+Aspernatur ullam vel facilis soluta cumque quam! Corporis, soluta. Cumque natus sint perferendis, praesentium atque eaque beatae. Nesciunt eum ut sint molestias optio! Itaque aliquid adipisci enim officiis dicta. Rem.
+Nemo excepturi officia sapiente veritatis, dolorem architecto libero reprehenderit laudantium at porro officiis quos laboriosam, voluptates non possimus, perspiciatis deserunt explicabo? Cumque dolorum perspiciatis labore similique unde culpa autem esse.
+Illo voluptatem iste distinctio. Tempore, excepturi reiciendis minima nulla esse ab suscipit similique! Fugiat laborum itaque, alias perspiciatis aliquam, dicta inventore reprehenderit iste ab dolorum quidem placeat? Obcaecati, modi odit.
+Rem nam veniam voluptates totam deleniti, sint distinctio modi inventore velit vero quam quisquam ipsam consectetur delectus minus dicta. Cum numquam quia itaque nulla possimus officiis vero voluptas quibusdam atque!
+Inventore, eius vitae. Dolores ipsa earum, nostrum soluta assumenda vero sequi eveniet repudiandae dolore quisquam, iste nam fuga. Iusto, porro alias? Neque iste nostrum aliquid error natus eligendi, vel quos!
+Placeat voluptatum commodi, recusandae at consectetur iusto, ad excepturi fugit dolore illum eos nobis hic quod veniam quam modi labore autem eligendi dicta in repellat aliquam nihil delectus? Est, exercitationem.
+Commodi, quod! Ut corporis voluptatibus beatae, accusantium quibusdam magni culpa optio delectus natus magnam a explicabo qui repellat unde eum voluptas. Pariatur facere modi ratione necessitatibus, dolore ipsam repellendus totam.
+Est, iste maxime dignissimos sequi repudiandae officiis soluta quisquam magnam minus culpa fuga, veritatis odit? Quia, quaerat culpa eius nostrum deserunt earum explicabo fugit dicta, repellat quam hic, quo error!
+Rerum, modi porro. Temporibus quae sapiente impedit incidunt repudiandae repellat velit dicta maxime quisquam ullam non sunt atque eum, totam harum commodi doloribus vitae vel, beatae eaque aliquam quam? Incidunt?
+              </textarea
               >
             </fieldset>
             <div class="agreement">
@@ -216,7 +220,7 @@ pageEncoding="UTF-8"%>
                 id="agreed"
                 required
               />
-              <label for="agreed">예, 동의합니다.</label>
+              <label for="agreed">Yes, Agree</label>
             </div>
           </div>
           <div class="register_btns" align="center">
@@ -234,9 +238,9 @@ pageEncoding="UTF-8"%>
               type="submit"
               onclick="return validate()"
             >
-              회원가입
+             SignUp
             </button>
-            <button class="btn btn-secondary" type="reset">취소하기</button>
+            <button class="btn btn-secondary" type="reset">Cancel</button>
           </div>
         </form>
       </div>
@@ -252,11 +256,11 @@ pageEncoding="UTF-8"%>
           data: { checkId: $userId.val() },
           success: function (result) {
             if (result == "NNNNN") {
-              alert("이미 존재하거나 탈퇴한회원의 아이디입니다.");
+              alert("Id in use");
               //다시입력유도
               $userId.focus();
             } else {
-              if (confirm("사용 가능한 아이디입니다. 사용하시겠습니까?")) {
+              if (confirm("Id is available! will you use it?")) {
                 $("#enroll-form button[type=submit]").removeAttr("disabled");
                 $("input[name=userPwd]").prop("disabled", false);
                 $("input[name=userPwd]").focus();
@@ -276,11 +280,11 @@ pageEncoding="UTF-8"%>
           if (
             $("input[name=userPwd]").val() === $("input[name=checkPwd]").val()
           ) {
-            $("#pwdResult").text("비밀번호가 일치합니다.");
+            $("#pwdResult").text("Passwords matched!");
             $("#pwdResult").css("color", "blue");
             pwdValidate = true;
           } else {
-            $("#pwdResult").text("비밀번호가 불일치합니다.");
+            $("#pwdResult").text("Password do not match");
             $("#pwdResult").css("color", "red");
             pwdValidate = false;
           }
@@ -289,11 +293,11 @@ pageEncoding="UTF-8"%>
           if (
             $("input[name=userPwd]").val() === $("input[name=checkPwd]").val()
           ) {
-            $("#pwdResult").text("비밀번호가 일치합니다.");
+            $("#pwdResult").text("Passwords matched!");
             $("#pwdResult").css("color", "blue");
             pwdValidate = true;
           } else {
-            $("#pwdResult").text("비밀번호가 불일치합니다.");
+            $("#pwdResult").text("Password do not match");
             $("#pwdResult").css("color", "red");
             pwdValidate = false;
           }
@@ -301,16 +305,16 @@ pageEncoding="UTF-8"%>
       });
 
 
-      let regExp = /^[가-힣]+$/;
+      let regExp = /^[a-zA-Z]+$/;
       
      
      if( $("input[name=userName]").change(function(){
          let userName = $(this).val();
          if(!regExp.test(userName)){
-           $("#nameResult").text("올바른 형식의 이름이 아닙니다.");
+           $("#nameResult").text("Enter your name in the right format");
            $("#nameResult").css("color", "red");
          } else {
-          $("#nameResult").text("올바른 형식의 이름 입니다.");
+          $("#nameResult").text("We got your name!");
           $("#nameResult").css("color", "blue");
 
 
@@ -319,16 +323,16 @@ pageEncoding="UTF-8"%>
      }));
 
      
-    regExp2 = /^[0-9]+$/;
+    regExp2 = /^[0-10]+$/;
      if($("input[name=phone]").change(function() {
 
       
       let phone = $(this).val();
       if(!regExp2.test(phone)) {
-        $("#phoneResult").text("올바른 형식의 번호가 아닙니다");
+        $("#phoneResult").text("Enter your phone properly");
         $("#phoneResult").css("color","red");
       } else {
-        $("#phoneResult").text("올바른 형식의 번호 입니다");
+        $("#phoneResult").text("We got your phone!");
         $("#phoneResult").css("color","blue");
       }
       
@@ -345,7 +349,7 @@ pageEncoding="UTF-8"%>
           $("input[name=userPwd]").val() !== $("input[name=checkPwd]").val()
         ) {
           isValidated = false;
-          messageValidation = "비밀번호를 다시 입력해주세요";
+          messageValidation = "Please enter the password again";
         }
         $("#validateMsg").text(messageValidation);
         return isValidated;

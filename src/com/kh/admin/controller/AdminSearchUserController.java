@@ -41,7 +41,7 @@ public class AdminSearchUserController extends HttpServlet {
 		if(request.getSession().getAttribute("loginUser")!= null && ((Member)request.getSession().getAttribute("loginUser")).getMemId().equals("admin")) {
 			
 			if(searchList.isEmpty()) {
-				request.getSession().setAttribute("alertMsg","조회하신 정보가 없습니다.");
+				request.getSession().setAttribute("alertMsg","no list");
 				response.sendRedirect(request.getContextPath()+"/userAdmin.ad?currentPage=1");
 			}
 			else {
@@ -52,7 +52,7 @@ public class AdminSearchUserController extends HttpServlet {
 			}
 			
 		}else {
-			request.getSession().setAttribute("alertMsg", "관리자가 아니면 사용하실 수 없습니다.");
+			request.getSession().setAttribute("alertMsg", "It is only for admin.");
 			response.sendRedirect("/pet/");
 		}
 		

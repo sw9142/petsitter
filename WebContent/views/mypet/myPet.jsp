@@ -42,20 +42,7 @@ pageEncoding="UTF-8"%>
             padding: 1rem;
             font-weight: bold;
           }
-          /* .thumbnail {
-            border: 1px solid white;
-            width: 300px;
-
-            margin: 15px;
-            margin-top: 50px;
-            position: relative;
-            left: 100px;
-          }
-
-          .thumbnail:hover {
-            cursor: pointer;
-            opacity: 0.7;
-          } */
+         
         </style>
       </head>
       <body>
@@ -68,7 +55,7 @@ pageEncoding="UTF-8"%>
 
         <div class="mypet-page">
           <br />
-          <h2 align="center" style="font-weight: bold">마이펫 페이지</h2>
+          <h2 align="center" style="font-weight: bold">MyPet Page</h2>
 
           <hr />
           <br />
@@ -84,7 +71,7 @@ pageEncoding="UTF-8"%>
                 class="btn btn-success btn-sm"
                 style="width: 120px; height: 60px"
               >
-                등록하기
+                Register
               </button>
               <br /><br />
             </div>
@@ -126,7 +113,7 @@ pageEncoding="UTF-8"%>
             <!-- [] 값이 있긴 해서 안드는거임.  -->
             <div align="center">
               <p>
-                <b>마이펫을 등록해주세요.</b>
+                <b>Register Your Pet</b>
               </p>
             </div>
             <% } %>

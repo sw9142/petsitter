@@ -11,10 +11,11 @@ pageEncoding="UTF-8"%>
       }
       .FAQ_container {
         text-align: center;
-        margin: 2rem;
+        margin: 3rem 0 6rem 0;
       }
       .FAQ_container h3 {
         padding: 1rem;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -22,34 +23,25 @@ pageEncoding="UTF-8"%>
     <%@ include file="../common/menubar.jsp" %>
 
     <div class="support_container">
-      <h2 align="center" style="font-weight: bold">자주묻는 질문들</h2>
+      <h2 align="center" style="font-weight: bold; margin: 3rem auto">Frequently Asked Questions</h2>
       <div class="FAQ_container">
-        <h3>Q. 고객센터의 상담시간</h3>
+        <h3>Q. How to contact MyPetSitter?</h3>
         <p>
-          - 고객센터 전화번호 : 1544-0000 <br />
+          MyPetSitter telephone : 1544-0000 <br />
           <br />
         </p>
-        <h3>Q. 고객센터의 상담시간2</h3>
+        <h3>Q. Working hours</h3>
         <p>
-          - 상담 시간 : 평일 오전 9시 30분 ~ 오후 6시 (점심시간 : 오전 11시 30분
+          9: 30 am ~  6 pm(lunch break :  11:30 am)
+          
         </p>
-        <h3>Q. 고객센터의 상담시간3</h3>
-        <p>~ 오후 1시 30분 / 주말, 공휴일 휴무) <br /></p>
-        <h3>Q. 고객센터의 상담시간4</h3>
-        <p>
-          - 전화 연결이 어려운 경우 이메일로 문의를 남겨주시면 확인 후 정성껏
-          답변드리겠습니다. <br />
-        </p>
-        <h3>Q. 고객센터의 상담시간</h3>
-        <p>
-          - 고객센터 전화번호 : 1544-0000 <br />
-          - 상담 시간 : 평일 오전 9시 30분 ~ 오후 6시 (점심시간 : 오전 11시 30분
-          ~ 오후 1시 30분 / 주말, 공휴일 휴무) <br />
-          - 전화 연결이 어려운 경우 이메일로 문의를 남겨주시면 확인 후 정성껏
-          답변드리겠습니다. <br />
-        </p>
+        <h3>Q. Can I make a complain?</h3>
+        <p>Yes! Please let us know if you have any issue or complains. <br>Go to MyPage -> Matching list -> Select the matching case -> make a complain and send it to us <br /></p>
+   
+    	<h3>Q. Can I make a complain?</h3>
+        <p>Yes! Please let us know if you have any issue or complains. <br>Go to MyPage -> Matching list -> Select the matching case -> make a complain and send it to us <br /></p>
         <section class="direction">
-            <h3 align = "center">Q. 오시는 길</h3>
+            <h3 align = "center">Q.Lorem ipsum dolor sit</h3>
             <p><img src="././resources/images/map.png" width="700px" /><br></p>
         </section>
       </div>

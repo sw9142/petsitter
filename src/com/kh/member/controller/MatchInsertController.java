@@ -79,7 +79,7 @@ public class MatchInsertController extends HttpServlet {
 			
 		}else {
 				
-			request.setAttribute("errorMsg", "메치에 실패하였습니다.");
+			request.setAttribute("errorMsg", "Failed in matching");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 		

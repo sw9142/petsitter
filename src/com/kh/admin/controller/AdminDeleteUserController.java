@@ -34,7 +34,7 @@ public class AdminDeleteUserController extends HttpServlet {
 		int result = new AdminService().adminDeleteUser(memNum);
 
 		if(result > 0) {
-			request.getSession().setAttribute("alertMsg", "성공적으로 회원삭제");
+			request.getSession().setAttribute("alertMsg", "Successfully delete the member");
 			
 			response.sendRedirect(request.getContextPath() + "/userAdmin.ad?currentPage=1");
 		}

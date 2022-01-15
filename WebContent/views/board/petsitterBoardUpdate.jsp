@@ -64,48 +64,48 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
     
           <table class="table table-borderless">
             <tr>
-              <th>펫시터 경험이 있으신가요?</th>
+               <th>Do you have experience?</th>
               <td>
                 <input type="radio" name="psExp" value="Y" id="exyes" />
-                <label for="exyes">예</label>
+                <label for="exyes">Yes</label>
 
                 <input type="radio" name="psExp" value="N" id="exno" />
-                <label for="exno">아니요</label>
+                <label for="exno">No</label>
               </td>
             </tr>
             <tr>
-              <th>지금 키우시는 댕댕이가 있으신가요?</th>
+               <th>Do you have a dog in your home?</th>
               <td>
                 <input type="radio" name="psPet" value="Y" id="petyes" />
-                <label for="petyes">예</label>
+                <label for="petyes">Yes</label>
 
                 <input type="radio" name="psPet" value="N" id="petno" />
-                <label for="petno">아니요</label>
+                <label for="petno">No</label>
               </td>
             </tr>
             <tr>
-              <th>댁에 어린아이(12미만)가 있으신가요?</th>
+             <th>Do you have Kid(under 12) in your home?</th>
               <td>
                 <input type="radio" name="psKid" value="Y" id="kidyes" />
-                <label for="kidyes">예</label>
+                <label for="kidyes">Yes</label>
 
                 <input type="radio" name="psKid" value="N" id="kidno" />
-                <label for="kidno">아니요</label>
+                <label for="kidno">No</label>
               </td>
             </tr>
             <tr>
-              <th>댁에 흡연자가 있으신가요?</th>
+               <th>Do you smoke?</th>
               <td>
                 <input type="radio" name="psSmoke" value="Y" id="smokeyes" />
-                <label for="smokeyes">예</label>
+                <label for="smokeyes">Yes</label>
 
                 <input type="radio" name="psSmoke" value="N" id="smokeno" />
-                <label for="smokeno">아니요</label>
+                <label for="smokeno">No</label>
               </td>
             </tr>
            
             <tr>
-              <th>돌봄 가능한 댕댕이 수</th>
+                <th>How many dogs can you take care of?</th>
               <td>
                 <select name="petCap">
                   <option selected>0</option>
@@ -123,12 +123,12 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
               </td>
             </tr>
             <tr>
-              <th>펫시팅 서비스 금액</th>
+             <th>Your service price</th>
               <td>
                 <select name="price">
-                  <option selected value="7000" >7000원</option>
-                  <option value="8000">8000원</option>
-                  <option value="9000">9000원</option>
+                  <option selected value="7000">$7,000</option>
+                  <option value="8000">$8,000</option>
+                  <option value="9000">$9,000</option>
                   <option value="10000">10000원</option>
                   <option value="11000">11000원</option>
                   <option value="12000">12000원</option>
@@ -209,16 +209,16 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
             </script>
             <tr>
               <th colspan="2">
-                "이건 너무 어려워요"하는 사항이 있나요?
+                Any things in your mind to tell PetOnwer?
                 <p style="margin: 0">
-                  예) 15kg이상 강아지는 돌보기가 어려워요.
+                   ex) I can't take care of dog weighed more than 15 kg
                 </p>
               </th>
             </tr>
             <tr>
               <td colspan="2" style="padding: 0">
                 <textarea
-                  placeholder="내용을 입력해주세요."
+                   placeholder="tell them what you in your mind"
                   name="condition"
                   rows="5"
                   cols="80"
@@ -228,7 +228,7 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
               </td>
             </tr>
             <tr>
-              <th colspan="2">견주들에게 자신을 소개시켜주세요!</th>
+          <th colspan="2">Tell them about you!</th>
             </tr>
             <tr>
               <td colspan="2">
@@ -244,7 +244,7 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
             <tr>
               <td colspan="2" style="padding: 0">
                 <textarea
-                  placeholder="내용을 입력해주세요."
+               
                   name="psDesc"
                   rows="5"
                   cols="80"
@@ -252,7 +252,7 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
               </td>
             </tr>
             <tr>
-              <th>소개할 사진을 올려주세요</th>
+              <th>Any pictures to upload?</th>
 				<td >
 				
           <div id="upfiles_wrap originalfiles"  >
@@ -298,8 +298,8 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
 
 
           <div class="register_btns" align="center">
-            <button  class="btn btn-primary" type="submit">업데이트 하기</button>
-            <button type="reset" class="btn btn-secondary" type="reset">취소하기</button>
+            <button  class="btn btn-primary" type="submit">UPDATE</button>
+            <button type="reset" class="btn btn-secondary" type="reset">CANCEL</button>
           </div>
         </form>
       </div>

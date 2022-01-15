@@ -106,10 +106,10 @@ public class BoardUpdateDetailController extends HttpServlet {
 
 				if(result > 0) {
 					
-					request.getSession().setAttribute("alertMsg", "업데이트에 성공하였습니다.");
+					request.getSession().setAttribute("alertMsg", "Successfully Updated");
 					response.sendRedirect(request.getContextPath()+"/detail.bo?bno="+bno);
 				}else {
-					request.setAttribute("errorMsg", "업데이트 실패하였습니다.");
+					request.setAttribute("errorMsg", "Failed in update");
 					request.getRequestDispatcher("views/common/errorPage.jsp");
 				}
 				

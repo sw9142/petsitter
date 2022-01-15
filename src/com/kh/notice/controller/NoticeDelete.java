@@ -38,11 +38,11 @@ public class NoticeDelete extends HttpServlet {
 				int delete = new NoticeService().noticeDelete(noticeNo);
 				
 				if(delete>0) {
-					request.getSession().setAttribute("alertMsg", "공지사항이 삭제되었습니다.");
+					request.getSession().setAttribute("alertMsg", "Successfully deleted the notice");
 					response.sendRedirect(request.getContextPath()+"/list.no?currentPage=1");
 				}
 				else {
-					request.setAttribute("alertMsg", "공지사항이 삭제되지 않았습니다.");
+					request.setAttribute("alertMsg", "Failed in deleting the notice");
 					response.sendRedirect(request.getContextPath()+"/detail.no?nno="+noticeNo);
 				}
 	}

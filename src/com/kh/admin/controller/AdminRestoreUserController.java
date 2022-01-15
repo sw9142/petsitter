@@ -30,7 +30,7 @@ public class AdminRestoreUserController extends HttpServlet {
         int result = new AdminService().adminRestoreUser(memNum);
         
         if(result > 0) {
-            request.getSession().setAttribute("alertMsg", "성공적으로 회원복구");
+            request.getSession().setAttribute("alertMsg", "Successfully recovered the member");
             response.sendRedirect(request.getContextPath() + "/userAdmin.ad?currentPage=1");
         }
     }

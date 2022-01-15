@@ -153,14 +153,14 @@ public class MyPetEnrollController extends HttpServlet {
 				if(result > 0) { // 성공 => Mypet.me 로 요청 (sendRedirect)
 					
 					
-					request.getSession().setAttribute("alertMsg", "성공적으로 업로드 되었습니다.");
+					request.getSession().setAttribute("alertMsg", "Your Pet has sucessfully registered!");
 					// response.sendRedirect(request.getContextPath() + "/myPet.me");
 					request.getRequestDispatcher("views/mypet/myPet.jsp").forward(request, response);
 					
 				}
 				else { // 실패 => 에러페이지
 					
-					request.getSession().setAttribute("alertMsg", "업로드 실패하셨습니다.");
+					request.getSession().setAttribute("alertMsg", "Failed in registering your pet");
 					request.getRequestDispatcher("views/mypet/myPet.jsp").forward(request, response);
 				}
 			

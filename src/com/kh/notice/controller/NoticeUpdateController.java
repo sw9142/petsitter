@@ -53,12 +53,12 @@ public class NoticeUpdateController extends HttpServlet {
 		//5) 화면 띄우기
 		if(result>0) {
 			request.setAttribute("n", n);
-			request.getSession().setAttribute("alertMsg", "공지사항이 수정되었습니다.");
+			request.getSession().setAttribute("alertMsg", "Updated the notice");
 			// 수정된 결과를 다시 조회해서 넘기기
 			response.sendRedirect(request.getContextPath()+"/detail.no?nno="+noticeNum+"&currentPage="+currentPage);
 		}
 		else {
-			request.getSession().setAttribute("alertMsg", "공지사항 수정이 실패했습니다.");
+			request.getSession().setAttribute("alertMsg", "Failed in update");
 			request.setAttribute("currentPage", currentPage);
 			response.sendRedirect(request.getContextPath() + "/detail.no?nno="+noticeNum+"&currentPage="+currentPage);
 		}

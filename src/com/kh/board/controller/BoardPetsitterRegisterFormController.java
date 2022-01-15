@@ -48,7 +48,7 @@ public class BoardPetsitterRegisterFormController extends HttpServlet {
 			
 			
 		}else {
-			request.getSession().setAttribute("alertMsg", "로그인 하셔야 이용 가능한 서비스 입니다.");
+			request.getSession().setAttribute("alertMsg", "Please Login First");
 			response.sendRedirect("/pet/");
 		
 		}

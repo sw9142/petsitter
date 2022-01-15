@@ -128,23 +128,23 @@
 	                    <td>
 							<div class="location"> 
 						   		<select name="location" id="location">
-									<option value="서울">Seoul</option>
-									<option value="경기">KyungKi</option>
-									<option value="인천">Incheon</option>
-									<option value="강원">강원</option>
-									<option value="충북">충북</option>
-									<option value="충남">충남</option>
-									<option value="전북">전북</option>
-									<option value="전북">전남</option>
-									<option value="광주">광주</option>
-									<option value="울산">울산</option>
-									<option value="경북">경북</option>
-									<option value="경남">경남</option>
-									<option value="대구">대구</option>
-									<option value="부산">부산</option>
-									<option value="세종">세종</option>
-									<option value="대전">대전</option>
-									<option value="제주">제주</option>
+									<option value="Seoul">Seoul</option>
+				                    <option value="KyungKi">KyungKi</option>
+				                    <option value="Incheon">Incheon</option>
+				                    <option value="KangWon">KangWon</option>
+				                    <option value="ChungBook">ChungBook</option>
+				                    <option value="ChungNam">ChungNam</option>
+				                    <option value="JunBook">JunBook</option>
+				                    <option value="JunNam">JunNam</option>
+				                    <option value="kwangJu">kwangJu</option>
+				                    <option value="WoolSan">WoolSan</option>
+				                    <option value="KyungBuk">KyungBuk</option>
+				                    <option value="KyungNam">KyungNam</option>
+				                    <option value="DaeGu">DaeGu</option>
+				                    <option value="Busan">Busan</option>
+				                    <option value="SeJong">SeJong</option>
+				                    <option value="DaeJun">DaeJun</option>
+				                    <option value="Jeju">Jeju</option>
 								 </select> 시
 					 		</div>
 							<input type = "text"

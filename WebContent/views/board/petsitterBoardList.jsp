@@ -110,42 +110,42 @@
             
               <div class="search_container_top">
                 <div class="search_location">
-                  <label >지역</label>
+                  <label >Location</label>
                 <select name="location" id="location">
-                  <option selected value="서울">서울</option>
-                    <option value="경기">경기</option>
-                    <option value="인천">인천</option>
-                    <option value="강원">강원</option>
-                    <option value="충북">충북</option>
-                    <option value="충남">충남</option>
-                    <option value="전북">전북</option>
-                    <option value="전북">전남</option>
-                    <option value="광주">광주</option>
-                    <option value="울산">울산</option>
-                    <option value="경북">경북</option>
-                    <option value="경남">경남</option>
-                    <option value="대구">대구</option>
-                    <option value="부산">부산</option>
-                    <option value="세종">세종</option>
-                    <option value="대전">대전</option>
-                    <option value="제주">제주</option>
+                    <option selected value="Seoul">Seoul</option>
+                    <option value="KyungKi">KyungKi</option>
+                    <option value="Incheon">Incheon</option>
+                    <option value="KangWon">KangWon</option>
+                    <option value="ChungBook">ChungBook</option>
+                    <option value="ChungNam">ChungNam</option>
+                    <option value="JunBook">JunBook</option>
+                    <option value="JunNam">JunNam</option>
+                    <option value="kwangJu">kwangJu</option>
+                    <option value="WoolSan">WoolSan</option>
+                    <option value="KyungBuk">KyungBuk</option>
+                    <option value="KyungNam">KyungNam</option>
+                    <option value="DaeGu">DaeGu</option>
+                    <option value="Busan">Busan</option>
+                    <option value="SeJong">SeJong</option>
+                    <option value="DaeJun">DaeJun</option>
+                    <option value="Jeju">Jeju</option>
                   </select>
                 </div>
                 <div class="search_price">
-                  <label>가격</label>
+                  <label>Price Range</label>
                   <select name="price" id="price">
                   
-                    <option selected value="7000~15000">7000원 ~ 15000원</option>
-                    <option value="15000~20000">15000원 ~ 20000원</option>
-                    <option value="20000~25000">20000원 ~ 25000원</option>
-                    <option value="25000~30000">25000원 ~ 30000원</option>
+                    <option selected value="7000~15000">$7,000 ~ $15,000</option>
+                    <option value="15000~20000">$15,000 ~ $20,000</option>
+                    <option value="20000~25000">$20,000 ~ $25,000</option>
+                    <option value="25000~30000">$25,000 ~ $30,000</option>
                   </select>
                 </div>
  
               </div>
            
               <div class="search_btn">
-                <input class="btn btn-secondary" id="searchBtn" type="submit" value="검색" />
+                <input class="btn btn-secondary" id="searchBtn" type="submit" value="Search" />
               </div>
            
 		  	<script>
@@ -195,9 +195,9 @@
 	                             +   " <span id='petsitter_name'>"+ res[i].writer+ "</span> /"
 	                              +      " <span id='petsitter_name'>" + res[i].writerLocation +"</span> /";
 	                            if( res[i].psExp === "Y"){
-	                             result += " <span id='petsitter_name'>경력 있습니다.</span>";
+	                             result += " <span id='petsitter_name'>Experienced</span>";
 	                            }else{
-	                             result += "  <span id='petsitter_name'>경력 없어요.</span>"
+	                             result += "  <span id='petsitter_name'>No Exprience</span>"
 	                             }                                      
 	                             result   += "</div>"
 	                             + "<div class='petsitter_price'>1박: "+ res[i].price +"</div>"
@@ -237,13 +237,13 @@
                 <span id="petsitter_name"><%= b.getWriterLocation() %></span> /
                
                <% if(b.getPsExp().equals("Y")){%>
-                  <span id="petsitter_name">경력 있습니다.</span>
+                  <span id="petsitter_name">Experienced</span>
                <%}else{ %>
-                 <span id="petsitter_name">경력 없어요.</span>
+                 <span id="petsitter_name">No experience</span>
                <%} %>
               
               </div>
-              <div class="petsitter_price">1박: <%= b.getPrice() %></div>
+              <div class="petsitter_price"><%= b.getPrice() %> /Per Day</div>
             </div>
           </div>
           
@@ -300,14 +300,14 @@
 
           let bno = $(this).children().val();
         
-          location.href="/pet/detail.bo?bno="+bno;
+          location.href="/petsitter/detail.bo?bno="+bno;
 
          })
         $(".petsitter_info").on("click", function(){
         	
         	let bno = $(this).children().val();
       
-          location.href="/pet/detail.bo?bno="+bno;
+          location.href="/petsitter/detail.bo?bno="+bno;
         })
 
       })

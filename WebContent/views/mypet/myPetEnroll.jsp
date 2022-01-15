@@ -43,7 +43,7 @@
         <div class="outer1">
     
             <br>
-            <h2 align="center" style="font-weight: bold; padding: 2rem;">마이펫 등록</h2>
+            <h2 align="center" style="font-weight: bold; padding: 2rem;">Register MyPet</h2>
     
             <hr>
             <br>
@@ -58,43 +58,39 @@
                         <td align="center">
                             <table align="center" >
                                 <tr>
-                                    <th>이름</th>
+                                    <th>Name</th>
                                     <td><input type="text" name="petName" required></td>
                                 </tr>
                                 <tr>
-                                    <th width="100">성별</th>
+                                    <th width="100">Gender</th>
                                     <td>
                                         <input type="radio" name="petGender" value="M" required>M
                                         <input type="radio" name="petGender" value="F" required>F
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th width="100">품종</th>
+                                    <th width="100">Breed</th>
                                     <td>
                                         <select name="petType" id="petType" width=100>
-                                            <option value="">품종을 선택해주세요</option>
-                                            <option value="푸들">푸들</option>
-                                            <option value="말티즈">말티즈</option>
-                                            <option value="시바견">시바견</option>
-                                            <option value="시츄">시츄</option>
-                                            <option value="불독">불독</option>
-                                            <option value="골든리트리버">골든리트리버</option>
-                                            <option value="포메리안">포메리안</option>
-                                            <option value="웰시코기">웰시코기</option>
-                                            <option value="그외">그외</option>
+                                            <option value="">select</option>
+                                            <option value="Poodle">Poodle</option>
+                                            <option value="Maltese">Maltese</option>
+                                            <option value="Shiba">Shiba</option>
+                                            <option value="ShihTzu">ShihTzu</option>
+                                         
                                         </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th width="100">생년월일</th>
-                                    <td><input type="text" name="petBirth" placeholder="예) 2000"></td>
+                                    <th width="100">BirthDay</th>
+                                    <td><input type="text" name="petBirth" placeholder="ex) 2000"></td>
                                 </tr>
                                 <tr>
-                                    <th width="100">몸무게</th>
+                                    <th width="100">Weight</th>
                                     <td><input type="text" name="petWeight"></td>
                                 </tr>
                                 <tr>
-                                    <th>특징 및 <br> 요구사항</th>
+                                    <th>Characteristic or <br> Request</th>
                                     <td>
                                         <input type="text" name="petDec" style="width: 300px; height: 280px;" required></input>
                                     </td>
@@ -114,7 +110,7 @@
                 
     			<div align="center">    
 			            <button type="submit" class="btn btn-primary" onclick="return validate()" style="width: 80px; margin-top: 40px;">
-			           	 등록</button>
+			           	 Register</button>
 		        </div>
     
                 <script>
@@ -122,7 +118,7 @@
 
                     function validate(){
                         if($("#file1").val() == ""){
-                            alert("사진을 넣어주세요!")
+                            alert("upload the picture please!")
                         }else{
                             return true;
                         }

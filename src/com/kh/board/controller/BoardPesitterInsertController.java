@@ -100,11 +100,11 @@ public class BoardPesitterInsertController extends HttpServlet {
 				
 				
 				if(result > 0) {
-					request.getSession().setAttribute("alertMsg", "축하합니다! 펫시터 게시판에 추가되었습니다!");
+					request.getSession().setAttribute("alertMsg", "Congrat! You have just been listed to our PetSitter List!");
 					response.sendRedirect("list.bo?currentPage=1");
 				}else {
 					
-					request.setAttribute("errorMsg", "펫시터 신청하기에 실패하셨습니다.");
+					request.setAttribute("errorMsg", "Sorry you failed in application");
 					request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);;
 				}
 				

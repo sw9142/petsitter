@@ -53,7 +53,7 @@ public class MemberInsertController extends HttpServlet {
 			request.getRequestDispatcher("views/member/loginPage.jsp").forward(request, response);
 	
 		}else {
-			request.getSession().setAttribute("alertMsg", "회원등록에 실패하셨습니다.");
+			request.getSession().setAttribute("alertMsg", "Failed in member sign up");
 			request.getRequestDispatcher("views/member/register.jsp").forward(request, response);
 			
 		}

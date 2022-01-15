@@ -52,7 +52,7 @@ com.kh.member.model.vo.Match, com.kh.common.model.vo.PageInfo" %>
       <body>
         <%@ include file="../common/menubar.jsp" %>
         <div class="mymatching">
-          <h3 align="center" style="font-weight: bold">나의 매칭내역</h3>
+          <h3 align="center" style="font-weight: bold">My Matching List</h3>
           <br />
 
           <div align="center" class="search_bar">
@@ -61,10 +61,10 @@ com.kh.member.model.vo.Match, com.kh.common.model.vo.PageInfo" %>
               method="post"
               style="display: inline-block"
             >
-              <span> 지역</span>
+              <span>Location</span>
               <select name="location">
-                <option>서울</option>
-                <option>경기</option>
+                <option>Seoul</option>
+                <option>KyungKi</option>
                 <option>인천</option>
                 <option>강원</option>
                 <option>충북</option>
@@ -81,15 +81,15 @@ com.kh.member.model.vo.Match, com.kh.common.model.vo.PageInfo" %>
                 <option>대전</option>
                 <option>제주</option>
               </select>
-              <span> 날짜</span><input type="date" name="sdate" required/> ~
+              <span> Date</span><input type="date" name="sdate" required/> ~
               <input type="date"  name="edate" required/>
-              <span> 아이디</span><input type="text" name="id" required/>
+              <span> ID</span><input type="text" name="id" required/>
               <button
                 type="submit"
                 class="btn btn-outline-dark btn-sm"
                 style="display: inline-block; vertical-align: initial"
               >
-                검색
+                Search
               </button>
             </form>
           </div>
@@ -102,24 +102,24 @@ com.kh.member.model.vo.Match, com.kh.common.model.vo.PageInfo" %>
           >
             <thead>
               <tr>
-                <th>매칭코드</th>
-                <th>견주</th>
-                <th>펫시터</th>
-                <th>지역</th>
-                <th>예약 날짜</th>
-                <th>돌봄 시작 날짜</th>
-                <th>돌봄 종료 날짜</th>
-                <th>상세주소</th>
-                <th>돌봄 반려동물</th>
-                <th>매칭종료여부</th>
+                <th>Matching Code</th>
+                <th>PetOwner</th>
+                <th>PetSitter</th>
+                <th>Location</th>
+                <th>Application Date</th>
+                <th>Care Start Date</th>
+                <th>Care End Date</th>
+                <th>Address</th>
+                <th>Pet Info</th>
+                <th>Matching Status</th>
               </tr>
             </thead>
             <tbody>
               <!-- 게시글 출력 : 게시글이 있는지 없는지 => isEmpty() 이용해서 없는 경우 먼저 조건 부여 -->
               <% if(list.isEmpty()) { %>
               <!-- 조회글 없음 -->
-              <tr>
-                <td colspan="10">조회된 리스트가 없습니다.</td>
+              <tr onclick="return false;">
+                <td colspan="10"  >No List</td>
               </tr>
               <% } else { %>
               <!-- 반복 : list 에 있는 값을 순차적으로 접근해서 뽑아오기 -->
@@ -136,9 +136,9 @@ com.kh.member.model.vo.Match, com.kh.common.model.vo.PageInfo" %>
                 <td><%= m.getPetNum() %></td>
                 <td>
                 	<% if(m.getIsEnd().equals("N")) { %>
-                		진행중
+                		Ongoing
                 	<% } else { %>
-                		종료
+                		END
                 	<% } %>
                 </td>
               </tr>
@@ -192,5 +192,5 @@ com.kh.member.model.vo.Match, com.kh.common.model.vo.PageInfo" %>
         </div>
       </body>
     </html>
-  </Match></Match
->
+ 
+

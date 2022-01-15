@@ -48,7 +48,7 @@ public class MemberLoginController extends HttpServlet {
 		
 			response.sendRedirect("/petsitter/");
 		}else {
-			request.getSession().setAttribute("alertMsg", "ë¡œê·¸ì�¸ì—� ì‹¤íŒ¨í•˜ì…¨ìŠµë‹ˆë‹¤.");
+			request.getSession().setAttribute("alertMsg", "Sorry, you failed in login");
 			request.getRequestDispatcher("views/member/loginPage.jsp").forward(request, response);
 			
 		}

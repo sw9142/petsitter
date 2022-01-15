@@ -29,22 +29,22 @@ Notice n = (Notice)request.getAttribute("n");
 
     <div class="outer">
       <br />
-      <h2 align="center" style="font-weight: bold">공지사항 상세보기</h2>
+      <h2 align="center" style="font-weight: bold">Notice Content</h2>
       <br />
 
       <table id="detail-area" align="center" border="1" class="table">
         <tr>
-          <th width="70px" class="table-success">제목</th>
+          <th width="70px" class="table-success">Title</th>
           <td width="350px" colspan="3"><%=n.getNoticeTitle() %></td>
         </tr>
         <tr>
-          <th class="table-success">작성자</th>
+          <th class="table-success">Writer</th>
           <td><%=n.getNoticeWriter() %></td>
-          <th class="table-success" style="width: 100px">작성일</th>
+          <th class="table-success" style="width: 100px">Date</th>
           <td><%=n.getNoticeDate() %></td>
         </tr>
         <tr>
-          <th class="table-success">내용</th>
+          <th class="table-success">Content</th>
           <td colspan="3">
             <p style="height: 150px"><%=n.getNoticeContent() %></p>
           </td>
@@ -55,7 +55,7 @@ Notice n = (Notice)request.getAttribute("n");
         <a
           href="<%=contextPath %>/list.no?currentPage=<%=currentPage%>"
           class="btn btn-primary"
-          >목록가기</a
+          >Go to List</a
         >
 
         <!-- 작성자만 보이게끔 -->
@@ -65,12 +65,12 @@ Notice n = (Notice)request.getAttribute("n");
         <a
           href="<%=contextPath %>/updateForm.no?nno=<%=n.getNoticeNum()%>&currentPage=<%=currentPage %>"
           class="btn btn-warning"
-          >수정하기</a
+          >Update</a
         >
         <a
           href="<%=contextPath %>/delete.no?nno=<%=n.getNoticeNum()%>"
           class="btn btn-danger"
-          >삭제하기</a
+          >Delete</a
         >
         <!-- 게시물 번호 가져와서 뒤에다 붙여줘야함 -->
         <%} %>

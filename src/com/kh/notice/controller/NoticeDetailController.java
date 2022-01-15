@@ -47,7 +47,7 @@ public class NoticeDetailController extends HttpServlet {
 			//먼저 뽑아온 값들을 담고 화면을 띄워주는 순서를 잘 알아야 한다.
 		}
 		else {
-			request.getSession().setAttribute("alertMsg","공지사항 상세조회 실패");
+			request.getSession().setAttribute("alertMsg","Failed in retrieving the notice");
 			response.sendRedirect("/views/notice/noticeList.jsp?currentPage="+currentPage);
 		}
 	}

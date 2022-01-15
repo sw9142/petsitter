@@ -144,10 +144,10 @@ pageEncoding="UTF-8"%>
         bottom: 10rem;
         left: 5rem;
         color: white;
-        font-size: 3.5rem;
+        font-size: 3.2rem;
         font-weight: bold;
         text-shadow: 2px 1px 9px rgb(0 0 0 / 50%);
-        width: 420px;
+        width: 427px;
       }
       .ourcaresecond_desc {
         color: black;
@@ -155,11 +155,11 @@ pageEncoding="UTF-8"%>
         font-weight: bold;
         padding-top: 25rem;
         padding-left: 35rem;
-        width: 75%;
+        width: 82%;
       }
 
       #desc_detail {
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-weight: 500;
       }
       .main-fourthbox {
@@ -219,9 +219,9 @@ pageEncoding="UTF-8"%>
                   Become a MyPetsitter
                 </div>
                 <div class="applypetsitter_desc">
-                  댕댕이를 사랑하는 펫시터 님에 대해<br />
-                  소개시켜주세요 :)<br />
-                  펫시터님의 마음을 나누세요
+                 
+                 Tell us about you who loves dogs!<br />
+                  Get paid to play with dogs!<br />
                 </div>
               </div>
             </div>
@@ -276,8 +276,8 @@ pageEncoding="UTF-8"%>
               <div class="htu_content">
                 <div class="htu_title">Meet in advance</div>
                 <div class="htu_desc">
-                  돌봄시작 전 미리 만나서 펫시터와 돌봄장소를 확인해 보세요.
-                  You can meet your PetSitter beforehand and check out the place
+                Before starting the service, meet your PetSitter and get to know them and you can check out their place! 
+                 
                 </div>
               </div>
             </div>
@@ -296,7 +296,7 @@ pageEncoding="UTF-8"%>
           <div class="ourcarebox_first">
             <div class="ourcarefirst_img">
               <div class="ourcarefirst_desc">
-                검증된 펫시터가 깨끗한 환경과 안전한 산책을 제공해드려요
+                Trusted sitter provides a clean environment and fun dog walking
               </div>
             </div>
           </div>
@@ -313,10 +313,10 @@ pageEncoding="UTF-8"%>
               alt="main_comfortDog2"
             />
             <div class="ourcaresecond_desc">
-              배변처리와 깔끔한 환경정리 :)
+              Clean environment and Potty training :)
               <div id="desc_detail">
-                매주 내가 원하는 날, 원하는 시간을 정하기만 하면 <br />
-                펫시터가 댕댕이를 맞이할 준비를 합니다.
+                All you need to do is set a desired date <br />
+                then the PetSitter will be ready to welcome your puppy.
               </div>
             </div>
           </div>
@@ -326,9 +326,9 @@ pageEncoding="UTF-8"%>
         <section class="main-fourthbox">
           <h3 align="center" style="font-weight: bold">
             <span class="logo_name" style="font-family: Jua, sans-serif">
-              맡겨만주시조
+              MyPetSiiter
             </span>
-            고객센터
+            Support
           </h3>
 
           <div class="customer_service_box">
@@ -345,8 +345,8 @@ pageEncoding="UTF-8"%>
               onclick="location.href='<%= contextPath%>/support.ad'"
             >
               <div style="color: black; font-weight: bold">
-                <span style="color: #555454">FQA</span>
-                go to FQA
+                <span style="color: #555454">Support</span>
+              
               </div>
             </div>
           </div>

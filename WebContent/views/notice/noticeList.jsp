@@ -56,32 +56,32 @@
     <%@include file="../common/menubar.jsp" %>
 
     <div class="outer">
-      <h2 align="center" style="font-weight: bold">공지사항</h2>
+      <h2 align="center" style="font-weight: bold">Admin Notice</h2>
       <br />
       <div align="center">
         <form action="<%=contextPath %>/search.no" method="post">
           <input type="hidden" name="currentPage" value="1"  />
           <input type="date" name="noStartDate" required /> ~
-          <input type="date" name="noEndDate" required /> 제목
+          <input type="date" name="noEndDate" required /> Title
           <input type="text" name="keyword" required />
-          <input type="submit" value="검색" />
+          <input type="submit" value="Search" />
         </form>
       </div>
       <br />
       <table class="list-area table" align="center">
         <thead class="thead-dark">
           <tr>
-            <th>글번호</th>
-            <th width="400">제목</th>
-            <th width="100">게시자</th>
-            <th width="100">날짜</th>
-            <th>조회수</th>
+            <th>Board No</th>
+            <th width="400">Title</th>
+            <th width="100">Writer</th>
+            <th width="100">Date</th>
+            <th>view</th>
           </tr>
         </thead>
         <tbody>
           <%if(list.isEmpty()){ %>
          
-            <div colspan="5" id="noresult">조회된 목록이 없습니다.</div>
+            
          
           <%}else{ %> <%for(Notice n : list){ %>
           <!-- ArrayList는 size() -->
@@ -103,7 +103,7 @@
           style="margin-top: 2rem"
           onclick="location.href='<%=contextPath%>/enrollForm.no'"
         >
-          글 작성하기
+         Write
         </button>
       </div>
       <%} %>

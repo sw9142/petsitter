@@ -283,13 +283,13 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
      
       <div class="petsitter_secondbox" style="position: relative;">
         <div class="petsitter_info" style="position: absolute; top: 3;">
-         <span> 이름:   &nbsp; </span> <%= b.getWriter()  %>  &nbsp;   <span> 지역: </span>   &nbsp;    <%= b.getWriterLocation()  %>   &nbsp;  
+         <span> Name:   &nbsp; </span> <%= b.getWriter()  %>  &nbsp;   <span> Location: </span>   &nbsp;    <%= b.getWriterLocation()  %>   &nbsp;  
          
          <% if(b.getPsExp().equals("Y")){%>
-          <span> 경력: </span> &nbsp; 있음
+          <span> Experience: </span> &nbsp; Yes
 
           <%}else{%>
-            <span> 경력: </span> &nbsp;  없음
+            <span> Experience: </span> &nbsp;  None
             <%}%>
       
          </div>
@@ -328,10 +328,10 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
               </div>
             </div>
               <div class="app_totalprice">
-                <h5 style="text-align: end; margin-right: 0.5rem"><span style="color: #423bad; font-weight: bold;">가격 1박:</span> <span id="pricePerDay" style="font-weight: bold;"> <%= b.getPrice() %> 원</span></h5>
+                <h5 style="text-align: end; margin-right: 0.5rem"><span style="color: #423bad; font-weight: bold;">Price per day:</span> <span id="pricePerDay" style="font-weight: bold;"> <%= b.getPrice() %> Won</span></h5>
                
                <div class="calTotalPrice">
-                <button type="button"  id="calcPrice" >총 금액은?</button>
+                <button type="button"  id="calcPrice" >Total Amount? (click!)</button>
                 <h4> <span id="numOfDays"></span><span id="totalAmt"></span></h4>
               </div>
               </div>
@@ -344,10 +344,10 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
             
               <%if(loginUser == null){ %>
               
-                <button class="btn btn-primary" disabled onclick="window.alert('로그인 후 이용가능한 서비스 입니다.')">펫시터 신청하기!</button>
+                <button class="btn btn-primary" disabled onclick="window.alert('Please Login first')">Apply for PetSitter Care!</button>
               <%} else if(loginUser != null && loginUser.getMemNum().equals("ME1") ){%>
              
-                <button  type="button" id="deleteBtn" class="btn btn-danger btn-sm" style="padding: 0.3rem 1rem;">삭제</button>
+                <button  type="button" id="deleteBtn" class="btn btn-danger btn-sm" style="padding: 0.3rem 1rem;">Delete</button>
               <%}else { %>
                
               <!---->
@@ -361,19 +361,19 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
                           type="button"
                             class="btn btn-warning btn-sm"
                             onclick="location.href='<%=contextPath%>/updateDetailForm.bo?bno=<%= b.getBoardNum() %>'">
-                         		   편집
+                         		   UPDATE
                           </button>
-                          <button  type="button" id="deleteBtn" class="btn btn-danger btn-sm" style="padding: 0.3rem 1rem;">삭제</button>
+                          <button  type="button" id="deleteBtn" class="btn btn-danger btn-sm" style="padding: 0.3rem 1rem;">Delete</button>
                         </div>
                   <hr />	
                   	
                   	
                   	<%}else if(ownerPetList != null){ %>
-	                    <p>유저 펫 등록완료</p>
-	                    <button type="submit" class="btn btn-primary" onclick="return psInsertValidate()">펫시터 신청하기!</button>
+	                 
+	                    <button type="submit" class="btn btn-primary" onclick="return psInsertValidate()">Apply for PetSitter Care!</button>
 	                  <%}else{ %>	
-	                 <p>유저 펫 미등록</p>
-	                    <button type="button" class="btn btn-primary" onclick="location.href='<%=contextPath %>/myPet.me'">댕댕이를 먼저 등록해주세요</button>
+	                
+	                    <button type="button" class="btn btn-primary" onclick="location.href='<%=contextPath %>/myPet.me'">Please Enroll your pet first</button>
 	                  <%} %>          				
                   	
               <%} %>
@@ -392,25 +392,25 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
           <div class="abouthome">
             <table class="table">
               <tr>
-                <th class="table-secondary">지역</th>
+                <th class="table-secondary">Location</th>
                 <td><%= b.getWriterLocation() %></td>
 
-                <th class="table-secondary">흡연</th>
+                <th class="table-secondary">Smoking</th>
                   <td><%= b.getPsSmoke() %></td>
               </tr>
               <tr>
-                <th class="table-secondary">아이</th>
+                <th class="table-secondary">Kid(under 12)</th>
                  <td><%= b.getPsKid() %></td>
 
-                <th class="table-secondary">돌봄 가능 강아지 수</th>
-                   <td><%= b.getPetCap() %> 마리</td>
+                <th class="table-secondary">The max number of dogs PetSitter can take care of</th>
+                   <td><%= b.getPetCap() %> puppies</td>
               </tr>
             </table>
           </div>
         </div>
         <br />
         <div class="petsitter_aboutpet">
-          <h4>우리집 댕댕이도 소개시켜드려요!</h4>
+          <h4>Want to know about my puppy?</h4>
           
           
           <% if(petList != null){ %>
@@ -429,19 +429,19 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
 			            <div class="aboutpet_desc">
 			              <table>
 			                <tr>
-			                  <th>이름:</th>
+			                  <th>Name:</th>
 			                  <td><%= p.getPetName() %></td>
 			                </tr>
 			                <tr>
-			                  <th>생년월일:</th>
+			                  <th>BOD:</th>
 			                   <td><%= p.getPetBirth() %></td>
 			                </tr>
 			                <tr>
-			                  <th>견종:</th>
+			                  <th>Breed:</th>
 			                  <td><%= p.getPetType() %></td>
 			                </tr>
 			                <tr>
-			                  <th>특징:</th>
+			                  <th>Characteristic:</th>
 			                   <td><%= p.getPetDec() %></td>
 			                </tr>
 			              </table>
@@ -455,7 +455,7 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
            
             <div class="aboutpet_desc">
         
-                  <p>펫시터님은 아직 댕댕이가 없으시네요!</p>
+                  <p>PetSitter dose not have a dog yet!</p>
      
             </div>
           </div>
@@ -468,7 +468,7 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
       <br />
       <div class="petsitter_fourthbox">
         <div class="petsitter_condition">
-          <h4>이것만은 어려워요 ㅠㅠ</h4>
+          <h4>Dear PetOwner...</h4>
           <div class="condition_desc" >
 				<%= b.getCondition() %>
           </div>
@@ -495,7 +495,7 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
      
              }else{
               
-                window.alert("예약 날짜를 입력해주세요!")
+                window.alert("Please enter the date for the petsitting service!")
                 return false;
 
              }
@@ -567,7 +567,7 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
                        if(start.length > 0 && end.length > 0){
                    
                             if(start > end){
-                            alert("날짜를 잘못 입력하셨습니다.")
+                            alert("Wrong date.")
                           }else{
                             let startDate = new Date(start);
                             let endDate = new Date(end)
@@ -575,16 +575,16 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
                             let diffDay = diffMs/(1000*60*60*24);
                          
                           
-                            $("#numOfDays").text((diffDay+1)+"일 ");
+                            $("#numOfDays").text((diffDay+1)+"day(s) ");
                             let pricePerDay = $("#pricePerDay").text();
                            
                             let totalPrice =  (parseInt(pricePerDay) * diffDay);
                      
-                            $("#totalAmt").text(totalPrice + "원");
+                            $("#totalAmt").text(totalPrice + "Won");
                           }
                        }else{
                       
-                         $("#numOfDays").text("날짜를 입력하주세요! ");
+                         $("#numOfDays").text("Please Enter the date! ");
                        }
                 })
 
@@ -594,10 +594,10 @@ ArrayList<Mypet> ownerPetList = (ArrayList<Mypet>)request.getAttribute("ownerPet
             deleteHandler = function(){
               console.log("deleteHandler!")
         	   
-        	   if(window.confirm("정말로 삭제하시겠습니까?")){
+        	   if(window.confirm("Are you sure?")){
         		   location.href="<%=contextPath %>/delete.bo?bno=<%= b.getBoardNum() %>";
         	   }else{
-        		   console.log("취소")
+        		   console.log("Cancel")
         	   }
         	   
 
