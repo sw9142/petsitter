@@ -130,10 +130,10 @@ pageEncoding="UTF-8"%>
               <th>Your service price</th>
               <td>
                 <select name="price" required>
-                  <option selected value="7000">$7,000</option>
-                  <option value="8000">$8,000</option>
-                  <option value="9000">$9,000</option>
-                  <option value="10000">10000원</option>
+                  <option selected value="7000">7,000 won</option>
+                  <option value="8000">8,000 won</option>
+                  <option value="9000">9,000 won</option>
+                  <option value="10000">10000 won</option>
                   <option value="11000">11000원</option>
                   <option value="12000">12000원</option>
                   <option value="13000">13000원</option>
@@ -161,7 +161,7 @@ pageEncoding="UTF-8"%>
               <th colspan="2">
                 Any things in your mind to tell PetOnwer?
                 <p style="margin: 0">
-                  ex) I can't take care of dog weighed more than 15 kg
+                  ex)  I can't take care of a dog weighing more than 15 kg! 
                 </p>
               </th>
             </tr>

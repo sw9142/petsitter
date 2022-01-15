@@ -43,8 +43,16 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
      .petSitterupdate_form_container form {
         padding: 1rem;
       }
-
-
+	 #upfiles_wrap{
+		display: flex;
+		}
+	  #upfiles_wrap span, 
+	  #upfiles_wrap img{
+		margin-right: 1rem;
+		}
+	  #upfiles_wrap input{
+	    width: 230px;
+	  }
     </style>
   </head>
   <body>
@@ -211,7 +219,7 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
               <th colspan="2">
                 Any things in your mind to tell PetOnwer?
                 <p style="margin: 0">
-                   ex) I can't take care of dog weighed more than 15 kg
+                   ex)  I can't take care of a dog weighing more than 15 kg! 
                 </p>
               </th>
             </tr>
@@ -253,18 +261,18 @@ ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list")
             </tr>
             <tr>
               <th>Any pictures to upload?</th>
-				<td >
+				<td  style="display:none">
 				
-          <div id="upfiles_wrap originalfiles"  >
-            <%for(int i =0; i< list.size(); i++){ 
-            String fileName = "originalFileName"+ (i+1);
-            String fileNo = "originalFileNo"+ (i+1);%>
-            <input type="hidden" name=<%=fileNo%> value="<%= list.get(i).getFileNo() %>" />
-            <input type="hidden" name=<%=fileName%> value="<%= list.get(i).getChangeName() %>" />
-            <%} %>
-          </div>
+			          <div id="upfiles_wrap originalfiles"  >
+			            <%for(int i =0; i< list.size(); i++){ 
+			            String fileName = "originalFileName"+ (i+1);
+			            String fileNo = "originalFileNo"+ (i+1);%>
+			            <input type="hidden" name=<%=fileNo%> value="<%= list.get(i).getFileNo() %>" />
+			            <input type="hidden" name=<%=fileName%> value="<%= list.get(i).getChangeName() %>" />
+			            <%} %>
+			          </div>
         
-        </td>
+     		   </td>
               <td>
                 <div id="upfiles_wrap">
                   <span>MAIN</span>

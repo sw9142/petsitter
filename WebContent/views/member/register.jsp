@@ -323,7 +323,7 @@ Rerum, modi porro. Temporibus quae sapiente impedit incidunt repudiandae repella
      }));
 
      
-    regExp2 = /^[0-10]+$/;
+    regExp2 = /^[0-9]+$/;
      if($("input[name=phone]").change(function() {
 
       

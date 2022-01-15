@@ -57,6 +57,7 @@ public class BoardSearchController extends HttpServlet {
 		
 		
 		ArrayList<Board> list = new BoardService().selectSearchedList(location,  startPrice, endPrice);
+		System.out.println("searched list: "+ list);
 		response.setContentType("application/json; charset=UTF-8");
 		
 		Gson gson = new Gson();

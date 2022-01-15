@@ -135,8 +135,8 @@
                   <label>Price Range</label>
                   <select name="price" id="price">
                   
-                    <option selected value="7000~15000">$7,000 ~ $15,000</option>
-                    <option value="15000~20000">$15,000 ~ $20,000</option>
+                    <option selected value="7000~15000">7,000 won ~ 15,000 won</option>
+                    <option value="15000~20000">15,000 won ~ 20,000 won</option>
                     <option value="20000~25000">$20,000 ~ $25,000</option>
                     <option value="25000~30000">$25,000 ~ $30,000</option>
                   </select>

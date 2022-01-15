@@ -76,7 +76,11 @@
                                             <option value="Poodle">Poodle</option>
                                             <option value="Maltese">Maltese</option>
                                             <option value="Shiba">Shiba</option>
-                                            <option value="ShihTzu">ShihTzu</option>
+                                            <option value="Retriever">Retriever</option>
+                                            <option value="Bulldog">Bulldog</option>
+                                            <option value="Doberman">Doberman</option>
+                                            <option value="Shepherd">Shepherd</option>
+                                             <option value="ShihTzu">ShihTzu</option>
                                          
                                         </select>
                                     </td>
